@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="345DD378-89E2-F786-9CAD-497E10631E37" containerWithKeyObject="C335716C-EBDD-3AD8-FEA2-878785CDD221" localFKIndex="C272ECD2-B186-E54D-698D-B948D4A57036" name="ARTMEDIA_ARTWORK">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>6DBAF1FA-D133-5C36-599B-A47840548D0A</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<referredTableLongName>ARTWORK_MEDIA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A1092AF4-5A9D-FA66-BDB4-4EE7843B475A</referredTableID>
+<keyObject>61E7BCB3-4F26-2DC8-87EE-2723FDAFD994</keyObject>
+<referredKeyID>61E7BCB3-4F26-2DC8-87EE-2723FDAFD994</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>art_media_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

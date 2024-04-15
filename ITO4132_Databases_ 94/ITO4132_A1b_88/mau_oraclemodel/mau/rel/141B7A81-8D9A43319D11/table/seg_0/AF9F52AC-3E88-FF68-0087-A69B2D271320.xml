@@ -1,0 +1,157 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AF9F52AC-3E88-FF68-0087-A69B2D271320" name="GALLERY">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>BEDFB95C-B5F4-5D59-6062-45B2584B76F1</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="gal_id" id="04B5D1DE-0A78-2E5A-9EFC-249EA1617647">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Gallery ID]]></commentInRDBMS>
+<generatorID>98DE1A9E-C0CB-CA7E-FCC0-DE3F610EA7EC</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gal_name" id="6EFCD572-4FDD-1176-547F-4F63C05192F4">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Gallery name]]></commentInRDBMS>
+<generatorID>6124B688-06DB-5DCA-BF88-6F7B9D7984E9</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gal_manager" id="811562A1-75BD-3AC0-C52B-7D28665A29D6">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Gallery Manager's Name]]></commentInRDBMS>
+<generatorID>D17EC08D-6C53-CBFB-19F0-BDFCCB6B7D2F</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gal_street" id="B5CBD19E-0C69-3930-B997-D76A65361F6B">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Gallery street address]]></commentInRDBMS>
+<generatorID>B642B4DE-7020-C403-08EE-6061E6C116F3</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gal_town" id="158BB017-B9C4-81CA-1194-55EF449908DA">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Gallery town address]]></commentInRDBMS>
+<generatorID>B412B6DE-2751-1900-6826-C52E2A3EA6CF</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gal_state" id="D17A4A39-6CD4-5964-C849-E2F4A96E6AA8">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Gallery state address]]></commentInRDBMS>
+<generatorID>07A39E5B-0ED8-359E-468D-262878D57AEC</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gal_contact_phone" id="D0277E67-A81B-3B52-11EF-DE9CCE112873">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Gallery contact phone number]]></commentInRDBMS>
+<generatorID>AA97B409-1F8F-1B9F-90CD-CF1EB31C2617</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gal_commission" id="6636249F-6AB9-3015-C573-074638BED819">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Gallery commission (XX.XX%)]]></commentInRDBMS>
+<generatorID>E2CCE2EF-FD55-1C72-E8EE-4AD29A0FB5B9</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,2,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gal_open" id="B887ACB8-DE51-9D95-451E-D4F11EAF9804">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Gallery open time]]></commentInRDBMS>
+<generatorID>A66FAE2A-3F7D-1AFC-1BC0-A4F9FCC44608</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gal_close" id="C9EC4A82-8C07-EED9-0D0B-7B635091E808">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Gallery closing time]]></commentInRDBMS>
+<generatorID>10F69178-A6BB-911E-61FC-1B55634A80D4</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="482C7140-7AA0-AC37-D7F8-AE9D276A1674" name="GALLERY_PK">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>0AB1FECA-C561-91A1-054B-76A03993712F</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="04B5D1DE-0A78-2E5A-9EFC-249EA1617647"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

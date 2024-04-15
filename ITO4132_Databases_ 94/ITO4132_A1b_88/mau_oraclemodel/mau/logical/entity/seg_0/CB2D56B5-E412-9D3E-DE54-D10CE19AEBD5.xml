@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CB2D56B5-E412-9D3E-DE54-D10CE19AEBD5" name="HISTORY">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 08:00:27 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="hist_no" id="505F8462-ADAB-7034-C3D9-819FE3923DB1">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-14 07:48:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[History Number]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="artist_code" id="C6792325-81A2-793B-B155-2CE497EB22E3">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 08:06:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[Artist code]]></commentInRDBMS>
+<generatorID>319AC35A-3D88-BA6D-0BE5-1E8B103923C9</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<referedAttribute>55D768D7-ED91-8564-E724-909025F77BA9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="art_number" id="C5A853DE-F29F-D7CE-7132-2DCDDB95A850">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 08:06:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[Artwork number]]></commentInRDBMS>
+<generatorID>319AC35A-3D88-BA6D-0BE5-1E8B103923C9</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<referedAttribute>B3906C7C-299C-C2D3-5F39-70D43F966EEC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hist_date" id="3928E439-5648-2895-C245-8D1BAED3778D">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 08:00:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[History date]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hist_status" id="AB1A5B50-7A97-2E64-F76F-2D2D81A7EF6C">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 08:01:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[History status (W=Warehouse storage, T=Transit, D=Display, S=Sold, R=Returned to artist)]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<constraintName>chk_hist_status</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="D" description="Display"/>
+<valueDef value="R" description="Returned to artist"/>
+<valueDef value="S" description="Sold"/>
+<valueDef value="T" description="Transit"/>
+<valueDef value="W" description="Warehouse storage"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="gal_id" id="8CCC773B-CA83-B03B-7F1F-CEFA2AA675F8">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-14 08:06:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[Gallery ID]]></commentInRDBMS>
+<generatorID>354BA0B4-2E1A-0EF5-2F83-787F3A086071</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>98DE1A9E-C0CB-CA7E-FCC0-DE3F610EA7EC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="88D646B9-4579-F5C2-A648-83450C5C1002" name="HISTORY PK">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 08:00:55 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>505F8462-ADAB-7034-C3D9-819FE3923DB1</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="C8801F83-D03E-CD5B-F2B5-5735B97F1115" name="HISTORY_NK">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-14 07:49:23 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<newElementsIDs>3928E439-5648-2895-C245-8D1BAED3778D,319AC35A-3D88-BA6D-0BE5-1E8B103923C9,AB1A5B50-7A97-2E64-F76F-2D2D81A7EF6C</newElementsIDs>
+<usedAttributes>
+<attributeRef>3928E439-5648-2895-C245-8D1BAED3778D</attributeRef>
+<attributeRef>C6792325-81A2-793B-B155-2CE497EB22E3</attributeRef>
+<attributeRef>C5A853DE-F29F-D7CE-7132-2DCDDB95A850</attributeRef>
+<attributeRef>AB1A5B50-7A97-2E64-F76F-2D2D81A7EF6C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

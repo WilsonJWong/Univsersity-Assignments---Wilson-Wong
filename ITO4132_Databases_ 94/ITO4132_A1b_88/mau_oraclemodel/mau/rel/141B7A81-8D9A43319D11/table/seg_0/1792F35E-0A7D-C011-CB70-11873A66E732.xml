@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1792F35E-0A7D-C011-CB70-11873A66E732" name="SALE">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>A30DC627-1103-01DC-A0A0-FF4F94FEF7E5</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="sale_id" id="00D72B88-E3D1-A4A4-C60E-1B4079B5AC28">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Sale ID]]></commentInRDBMS>
+<generatorID>0E3E559A-9DD7-4E9B-4C04-2A020D8556F9</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sale_date" id="C5E232B1-3FCB-86B1-D27D-37AF3691B6B3">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Sale date]]></commentInRDBMS>
+<generatorID>F27D0059-1E60-A156-63E2-AC6B9821E18B</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sale_price" id="0A026B55-D404-4F47-FB93-07A8E14F70E6">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Sale price]]></commentInRDBMS>
+<generatorID>1094F0A9-97EF-D8DD-DBD6-CEFAEE4D28FD</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_id" id="7786BD38-19ED-458D-70E7-5C893678C1E5">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Customer ID]]></commentInRDBMS>
+<generatorID>4460106A-12C5-D26B-0D6C-059B481B9CDE</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="82A5478B-2BE7-C0DB-38AD-5A30E9F73791" referredColumn="090F2509-4359-78B1-C39B-917C042ECAE2"/>
+</associations>
+</Column>
+<Column name="exhibit_no" id="174D74E0-A96B-5386-BBF6-A442143936C5">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Exhibit number]]></commentInRDBMS>
+<generatorID>637DDBE6-81C5-F41F-60A7-C141CB9C66B1</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6103334B-795E-79C2-FAB2-F2D4A7D83D8A" referredColumn="2BE450C5-F943-1476-2C6F-9D05B8164E5B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DF22F99F-9F37-C856-886F-C61D5710BF24" name="SALE_PK">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>D00B7E1E-E286-6ADD-662C-2B3088B3EB75</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="00D72B88-E3D1-A4A4-C60E-1B4079B5AC28"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="35CAA2E6-30A2-A7B3-7E19-63D92013ABE4" name="CUSTOMER_SALE">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>65EFDD6D-A438-C200-3671-969706884B60</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7786BD38-19ED-458D-70E7-5C893678C1E5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="23F9FBC8-34F3-A04E-D04C-BEA44EA7E965" name="EXHIBIT_SALE">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>82864EA7-294F-59BC-1219-C8C2613BDF19</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="174D74E0-A96B-5386-BBF6-A442143936C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

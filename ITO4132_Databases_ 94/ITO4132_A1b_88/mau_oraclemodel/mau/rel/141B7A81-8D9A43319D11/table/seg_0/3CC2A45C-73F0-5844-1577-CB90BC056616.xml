@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3CC2A45C-73F0-5844-1577-CB90BC056616" name="CUSTOMER">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>DE6366EB-05DC-29EC-753D-9C140940F73D</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cust_id" id="090F2509-4359-78B1-C39B-917C042ECAE2">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Customer ID]]></commentInRDBMS>
+<generatorID>5BE7AF71-A4B3-BD36-E47F-9146DC636A83</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_name" id="D5554B6C-1726-7C8D-5157-5C1A305840D9">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Customer personal name]]></commentInRDBMS>
+<generatorID>EDFB2233-D6F2-53E0-EE15-5B4C8C18DD40</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_address" id="228D0390-9BDC-8D39-81AC-17624EF2AF91">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Customer address]]></commentInRDBMS>
+<generatorID>8A18BD60-7783-40F1-3681-7BBD7993D755</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_contact_phone" id="706D5677-A069-30CF-967B-58035F24F364">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Customer phone number]]></commentInRDBMS>
+<generatorID>C5238B05-7E59-BA40-4901-63F966B75FC2</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_business_name" id="1EB711FF-2551-6AEB-0BFB-B71DBB1C7F15">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Customer business name]]></commentInRDBMS>
+<generatorID>485A1AEA-43EA-32E5-88DA-01C226878F2C</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="48B3484F-E0A6-9643-F8BA-849FD6E348D2" name="CUSTOMER_PK">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>77289AFF-F4DB-9F0F-37B9-9D3049FCEF63</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="090F2509-4359-78B1-C39B-917C042ECAE2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0309A78D-FB00-4C05-926A-22657628EBE3" name="ARTWORK">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 07:44:31 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="art_number" id="B3906C7C-299C-C2D3-5F39-70D43F966EEC">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 07:44:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Artwork number]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="artist_code" id="55D768D7-ED91-8564-E724-909025F77BA9">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 07:47:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[Artist code]]></commentInRDBMS>
+<generatorID>2018F732-B42E-82E9-F909-E6A49F0671A5</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<referedAttribute>49E8957A-E2D9-4B29-10D2-723B49A70913</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="art_title" id="1FAECF02-AD76-6F19-B1F4-7386B44FD96E">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 07:45:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[Artwork title]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="art_date_accepted" id="45EE91FA-D4EE-D905-9242-CDC2FCBEC868">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 07:45:36 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date the art was accepted to mau]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="art_min_sell_price" id="73EACC64-5810-2E64-417A-6811879AA496">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 07:45:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[The minimum sell price of the artwork]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="art_media_id" id="39A6FC9A-E1D9-74FA-C6A6-04672736DEA2">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 07:53:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Artwork media ID]]></commentInRDBMS>
+<generatorID>6DBAF1FA-D133-5C36-599B-A47840548D0A</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<referedAttribute>C71B98F9-2F67-B3D9-0BAF-9C7E61D34FDC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="art_style_id" id="1A193098-9B6E-E01F-A5DF-EEB4719389A2">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 07:55:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[Artwork style ID]]></commentInRDBMS>
+<generatorID>931F19D3-0E32-476D-E355-D179A7B7F451</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<referedAttribute>D6117834-6C2C-837D-2235-F90FAA763665</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9A04EBE0-C7BA-3E0E-231B-9182B488FEBA" name="ARTWORK PK">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 07:44:51 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B3906C7C-299C-C2D3-5F39-70D43F966EEC</attributeRef>
+<attributeRef>55D768D7-ED91-8564-E724-909025F77BA9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

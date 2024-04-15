@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A1092AF4-5A9D-FA66-BDB4-4EE7843B475A" name="ARTWORK_MEDIA">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>99070C8A-55AB-3783-1F46-5361D479FE12</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="art_media_id" id="DAAA02A6-3DF6-0D70-1F1C-54A98DC714A7">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Artwork media ID]]></commentInRDBMS>
+<generatorID>C71B98F9-2F67-B3D9-0BAF-9C7E61D34FDC</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="art_media_desc" id="830AD61C-27DF-6E36-F9E7-BEB8A7D8D9AD">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Description of artwork media]]></commentInRDBMS>
+<generatorID>1AB77886-68B5-9328-0D28-0CDBDC9FD6E0</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="61E7BCB3-4F26-2DC8-87EE-2723FDAFD994" name="ARTWORK_MEDIA_PK">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>AFC0392F-8F9B-057E-397C-6C1DC2776006</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DAAA02A6-3DF6-0D70-1F1C-54A98DC714A7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

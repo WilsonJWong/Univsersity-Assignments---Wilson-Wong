@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="99070C8A-55AB-3783-1F46-5361D479FE12" name="ARTWORK_MEDIA">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 07:50:44 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="art_media_id" id="C71B98F9-2F67-B3D9-0BAF-9C7E61D34FDC">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 07:52:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[Artwork media ID]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="art_media_desc" id="1AB77886-68B5-9328-0D28-0CDBDC9FD6E0">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 07:52:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[Description of artwork media]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AFC0392F-8F9B-057E-397C-6C1DC2776006" name="ARTWORK_MEDIA PK">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 07:52:32 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C71B98F9-2F67-B3D9-0BAF-9C7E61D34FDC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

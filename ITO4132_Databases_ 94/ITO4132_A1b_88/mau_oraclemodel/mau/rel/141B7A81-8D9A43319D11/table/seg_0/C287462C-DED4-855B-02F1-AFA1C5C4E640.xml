@@ -1,0 +1,161 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C287462C-DED4-855B-02F1-AFA1C5C4E640" name="HISTORY">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>CB2D56B5-E412-9D3E-DE54-D10CE19AEBD5</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="hist_no" id="3825E234-4DA7-C06B-414B-B9BB499ED475">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[History Number]]></commentInRDBMS>
+<generatorID>505F8462-ADAB-7034-C3D9-819FE3923DB1</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="artist_code" id="F3381621-DF6D-864B-5E8E-EAB6757F5FFA">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Artist code]]></commentInRDBMS>
+<generatorID>C6792325-81A2-793B-B155-2CE497EB22E3</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="474461D4-2EC9-749B-899C-8B28B706BCDB" referredColumn="5D6CD424-3953-3313-C2FF-093CFD410BD8"/>
+</associations>
+</Column>
+<Column name="art_number" id="76833061-5ED0-4156-B213-FF8F6846C2AF">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Artwork number]]></commentInRDBMS>
+<generatorID>C5A853DE-F29F-D7CE-7132-2DCDDB95A850</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="474461D4-2EC9-749B-899C-8B28B706BCDB" referredColumn="B419B857-A06C-15FF-A7CB-52196A8BAA6E"/>
+</associations>
+</Column>
+<Column name="hist_date" id="FBEF5EC2-30F6-E3F3-59B4-66AFBDF487A4">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[History date]]></commentInRDBMS>
+<generatorID>3928E439-5648-2895-C245-8D1BAED3778D</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hist_status" id="AD6E69D3-C8AA-86E0-CCD5-40C176C7C75C">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[History status (W=Warehouse storage, T=Transit, D=Display, S=Sold, R=Returned to artist)]]></commentInRDBMS>
+<generatorID>AB1A5B50-7A97-2E64-F76F-2D2D81A7EF6C</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<constraintName>chk_hist_status</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="D" description="Display"/>
+<valueDef value="R" description="Returned to artist"/>
+<valueDef value="S" description="Sold"/>
+<valueDef value="T" description="Transit"/>
+<valueDef value="W" description="Warehouse storage"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gal_id" id="B2B974AB-BAA6-7E7E-5C65-B036C6452448">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Gallery ID]]></commentInRDBMS>
+<generatorID>8CCC773B-CA83-B03B-7F1F-CEFA2AA675F8</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2EBAAE52-2147-8973-8120-659EEE258F38" referredColumn="04B5D1DE-0A78-2E5A-9EFC-249EA1617647"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FCD4969E-7DC8-486F-F384-64EDDBE19E1E" name="HISTORY_PK">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>88D646B9-4579-F5C2-A648-83450C5C1002</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3825E234-4DA7-C06B-414B-B9BB499ED475"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E59D6E9D-4DE2-F6BD-9DA2-5597525C6041" name="HISTORY_NK">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>C8801F83-D03E-CD5B-F2B5-5735B97F1115</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FBEF5EC2-30F6-E3F3-59B4-66AFBDF487A4"/>
+<colUsage columnID="F3381621-DF6D-864B-5E8E-EAB6757F5FFA"/>
+<colUsage columnID="76833061-5ED0-4156-B213-FF8F6846C2AF"/>
+<colUsage columnID="AD6E69D3-C8AA-86E0-CCD5-40C176C7C75C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9FCDB0A8-7346-AFFB-3C3A-C002339083C4" name="ARTWORK_HISTORY">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>319AC35A-3D88-BA6D-0BE5-1E8B103923C9</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="76833061-5ED0-4156-B213-FF8F6846C2AF"/>
+<colUsage columnID="F3381621-DF6D-864B-5E8E-EAB6757F5FFA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="68BD1345-887B-886B-348C-B1B9F1CB3BF1" name="GALLERY_HISTORY">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>354BA0B4-2E1A-0EF5-2F83-787F3A086071</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B2B974AB-BAA6-7E7E-5C65-B036C6452448"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

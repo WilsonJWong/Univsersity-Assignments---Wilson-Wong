@@ -1,0 +1,618 @@
+SQL> 
+SQL> 
+SQL> DROP TABLE artist CASCADE CONSTRAINTS;
+
+Table ARTIST dropped.
+
+SQL> 
+SQL> DROP TABLE artwork CASCADE CONSTRAINTS PURGE;
+
+Table ARTWORK dropped.
+
+SQL> 
+SQL> DROP TABLE artwork_media CASCADE CONSTRAINTS PURGE;
+
+Table ARTWORK_MEDIA dropped.
+
+SQL> 
+SQL> DROP TABLE artwork_style CASCADE CONSTRAINTS PURGE;
+
+Table ARTWORK_STYLE dropped.
+
+SQL> 
+SQL> DROP TABLE customer CASCADE CONSTRAINTS PURGE;
+
+Table CUSTOMER dropped.
+
+SQL> 
+SQL> DROP TABLE exhibit CASCADE CONSTRAINTS PURGE;
+
+Table EXHIBIT dropped.
+
+SQL> 
+SQL> DROP TABLE gallery CASCADE CONSTRAINTS PURGE;
+
+Table GALLERY dropped.
+
+SQL> 
+SQL> DROP TABLE history CASCADE CONSTRAINTS PURGE;
+
+Table HISTORY dropped.
+
+SQL> 
+SQL> DROP TABLE sale CASCADE CONSTRAINTS PURGE;
+
+Table SALE dropped.
+
+SQL> 
+SQL> -- predefined type, no DDL - MDSYS.SDO_GEOMETRY
+SQL> 
+SQL> -- predefined type, no DDL - XMLTYPE
+SQL> 
+SQL> CREATE TABLE artist (
+  2      artist_code            NUMBER(4) NOT NULL,
+  3      artist_gname           VARCHAR2(20) NOT NULL,
+  4      artist_fname           VARCHAR2(20) NOT NULL,
+  5      artist_contact_address VARCHAR2(100) NOT NULL,
+  6      artist_phone           CHAR(12),
+  7      artist_num_artworks    NUMBER(3) NOT NULL,
+  8      artist_code1           NUMBER(4)
+  9  );
+
+Table ARTIST created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artist.artist_code IS
+  2      'Artist code';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artist.artist_gname IS
+  2      'Artist''s given name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artist.artist_fname IS
+  2      'Artist''s family name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artist.artist_contact_address IS
+  2      'Artist''s contact address';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artist.artist_phone IS
+  2      'Artist''s phone number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artist.artist_num_artworks IS
+  2      'The number of artworks created by the artist';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artist.artist_code1 IS
+  2      'Artist code';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE artist ADD CONSTRAINT artist_pk PRIMARY KEY ( artist_code );
+
+Table ARTIST altered.
+
+SQL> 
+SQL> CREATE TABLE artwork (
+  2      art_number         NUMBER(3) NOT NULL,
+  3      artist_code        NUMBER(4) NOT NULL,
+  4      art_title          VARCHAR2(50) NOT NULL,
+  5      art_date_accepted  DATE NOT NULL,
+  6      art_min_sell_price NUMBER(10, 2) NOT NULL,
+  7      art_media_id       NUMBER(4) NOT NULL,
+  8      art_style_id       NUMBER(4) NOT NULL
+  9  );
+
+Table ARTWORK created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artwork.art_number IS
+  2      'Artwork number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artwork.artist_code IS
+  2      'Artist code';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artwork.art_title IS
+  2      'Artwork title';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artwork.art_date_accepted IS
+  2      'Date the art was accepted to mau';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artwork.art_min_sell_price IS
+  2      'The minimum sell price of the artwork';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artwork.art_media_id IS
+  2      'Artwork media ID';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artwork.art_style_id IS
+  2      'Artwork style ID';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE artwork ADD CONSTRAINT artwork_pk PRIMARY KEY ( art_number,
+  2                                                              artist_code );
+
+Table ARTWORK altered.
+
+SQL> 
+SQL> CREATE TABLE artwork_media (
+  2      art_media_id   NUMBER(4) NOT NULL,
+  3      art_media_desc VARCHAR2(50) NOT NULL
+  4  );
+
+Table ARTWORK_MEDIA created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artwork_media.art_media_id IS
+  2      'Artwork media ID';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artwork_media.art_media_desc IS
+  2      'Description of artwork media';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE artwork_media ADD CONSTRAINT artwork_media_pk PRIMARY KEY ( art_media_id )
+  2  ;
+
+Table ARTWORK_MEDIA altered.
+
+SQL> 
+SQL> CREATE TABLE artwork_style (
+  2      art_style_id   NUMBER(4) NOT NULL,
+  3      art_style_desc VARCHAR2(50) NOT NULL
+  4  );
+
+Table ARTWORK_STYLE created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artwork_style.art_style_id IS
+  2      'Artwork style ID';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN artwork_style.art_style_desc IS
+  2      'Artwork style description';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE artwork_style ADD CONSTRAINT artwork_stlye_pk PRIMARY KEY ( art_style_id )
+  2  ;
+
+Table ARTWORK_STYLE altered.
+
+SQL> 
+SQL> CREATE TABLE customer (
+  2      cust_id            NUMBER(7) NOT NULL,
+  3      cust_name          VARCHAR2(50) NOT NULL,
+  4      cust_address       VARCHAR2(100) NOT NULL,
+  5      cust_contact_phone CHAR(12) NOT NULL,
+  6      cust_business_name VARCHAR2(50)
+  7  );
+
+Table CUSTOMER created.
+
+SQL> 
+SQL> COMMENT ON COLUMN customer.cust_id IS
+  2      'Customer ID';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN customer.cust_name IS
+  2      'Customer personal name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN customer.cust_address IS
+  2      'Customer address';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN customer.cust_contact_phone IS
+  2      'Customer phone number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN customer.cust_business_name IS
+  2      'Customer business name';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE customer ADD CONSTRAINT customer_pk PRIMARY KEY ( cust_id );
+
+Table CUSTOMER altered.
+
+SQL> 
+SQL> CREATE TABLE exhibit (
+  2      exhibit_no           NUMBER(7) NOT NULL,
+  3      gal_id               NUMBER(4) NOT NULL,
+  4      artist_code          NUMBER(4) NOT NULL,
+  5      art_number           NUMBER(3) NOT NULL,
+  6      exhibit_start_date   DATE NOT NULL,
+  7      exhibit_end_date     DATE,
+  8      exhibit_art_featured CHAR(1) NOT NULL
+  9  );
+
+Table EXHIBIT created.
+
+SQL> 
+SQL> ALTER TABLE exhibit
+  2      ADD CONSTRAINT chk_exhibit_art_featured CHECK ( exhibit_art_featured IN ( 'N', 'Y'
+  3      ) );
+
+Table EXHIBIT altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN exhibit.exhibit_no IS
+  2      'Exhibit number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN exhibit.gal_id IS
+  2      'Gallery ID';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN exhibit.artist_code IS
+  2      'Artist code';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN exhibit.art_number IS
+  2      'Artwork number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN exhibit.exhibit_start_date IS
+  2      'Exhibit start date';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN exhibit.exhibit_end_date IS
+  2      'Exhibit end date';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN exhibit.exhibit_art_featured IS
+  2      'Exhibit art featured in catalogue (Y=Yes, N=No)';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE exhibit ADD CONSTRAINT exhibit_pk PRIMARY KEY ( exhibit_no );
+
+Table EXHIBIT altered.
+
+SQL> 
+SQL> ALTER TABLE exhibit
+  2      ADD CONSTRAINT exhibit_nk UNIQUE ( artist_code,
+  3                                         art_number,
+  4                                         gal_id,
+  5                                         exhibit_start_date );
+
+Table EXHIBIT altered.
+
+SQL> 
+SQL> CREATE TABLE gallery (
+  2      gal_id            NUMBER(4) NOT NULL,
+  3      gal_name          VARCHAR2(50) NOT NULL,
+  4      gal_manager       VARCHAR2(50) NOT NULL,
+  5      gal_street        VARCHAR2(20) NOT NULL,
+  6      gal_town          VARCHAR2(20) NOT NULL,
+  7      gal_state         VARCHAR2(20) NOT NULL,
+  8      gal_contact_phone CHAR(12) NOT NULL,
+  9      gal_commission    NUMBER(2, 2) NOT NULL,
+ 10      gal_open          DATE,
+ 11      gal_close         DATE
+ 12  );
+
+Table GALLERY created.
+
+SQL> 
+SQL> COMMENT ON COLUMN gallery.gal_id IS
+  2      'Gallery ID';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN gallery.gal_name IS
+  2      'Gallery name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN gallery.gal_manager IS
+  2      'Gallery Manager''s Name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN gallery.gal_street IS
+  2      'Gallery street address';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN gallery.gal_town IS
+  2      'Gallery town address';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN gallery.gal_state IS
+  2      'Gallery state address';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN gallery.gal_contact_phone IS
+  2      'Gallery contact phone number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN gallery.gal_commission IS
+  2      'Gallery commission (XX.XX%)';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN gallery.gal_open IS
+  2      'Gallery open time';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN gallery.gal_close IS
+  2      'Gallery closing time';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE gallery ADD CONSTRAINT gallery_pk PRIMARY KEY ( gal_id );
+
+Table GALLERY altered.
+
+SQL> 
+SQL> CREATE TABLE history (
+  2      hist_no     NUMBER(7) NOT NULL,
+  3      artist_code NUMBER(4) NOT NULL,
+  4      art_number  NUMBER(3) NOT NULL,
+  5      hist_date   DATE NOT NULL,
+  6      hist_status CHAR(1) NOT NULL,
+  7      gal_id      NUMBER(4)
+  8  );
+
+Table HISTORY created.
+
+SQL> 
+SQL> ALTER TABLE history
+  2      ADD CONSTRAINT chk_hist_status CHECK ( hist_status IN ( 'D', 'R', 'S', 'T', 'W' )
+  3      );
+
+Table HISTORY altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN history.hist_no IS
+  2      'History Number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN history.artist_code IS
+  2      'Artist code';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN history.art_number IS
+  2      'Artwork number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN history.hist_date IS
+  2      'History date';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN history.hist_status IS
+  2      'History status (W=Warehouse storage, T=Transit, D=Display, S=Sold, R=Returned to artist)'
+  3  ;
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN history.gal_id IS
+  2      'Gallery ID';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE history ADD CONSTRAINT history_pk PRIMARY KEY ( hist_no );
+
+Table HISTORY altered.
+
+SQL> 
+SQL> ALTER TABLE history
+  2      ADD CONSTRAINT history_nk UNIQUE ( hist_date,
+  3                                         artist_code,
+  4                                         art_number,
+  5                                         hist_status );
+
+Table HISTORY altered.
+
+SQL> 
+SQL> CREATE TABLE sale (
+  2      sale_id    NUMBER(7) NOT NULL,
+  3      sale_date  DATE NOT NULL,
+  4      sale_price NUMBER(8, 2) NOT NULL,
+  5      cust_id    NUMBER(7) NOT NULL,
+  6      exhibit_no NUMBER(7) NOT NULL
+  7  );
+
+Table SALE created.
+
+SQL> 
+SQL> COMMENT ON COLUMN sale.sale_id IS
+  2      'Sale ID';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN sale.sale_date IS
+  2      'Sale date';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN sale.sale_price IS
+  2      'Sale price';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN sale.cust_id IS
+  2      'Customer ID';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN sale.exhibit_no IS
+  2      'Exhibit number';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE sale ADD CONSTRAINT sale_pk PRIMARY KEY ( sale_id );
+
+Table SALE altered.
+
+SQL> 
+SQL> ALTER TABLE artist
+  2      ADD CONSTRAINT artist_artist FOREIGN KEY ( artist_code1 )
+  3          REFERENCES artist ( artist_code );
+
+Table ARTIST altered.
+
+SQL> 
+SQL> ALTER TABLE artwork
+  2      ADD CONSTRAINT artist_artwork FOREIGN KEY ( artist_code )
+  3          REFERENCES artist ( artist_code );
+
+Table ARTWORK altered.
+
+SQL> 
+SQL> ALTER TABLE artwork
+  2      ADD CONSTRAINT artmedia_artwork FOREIGN KEY ( art_media_id )
+  3          REFERENCES artwork_media ( art_media_id );
+
+Table ARTWORK altered.
+
+SQL> 
+SQL> ALTER TABLE artwork
+  2      ADD CONSTRAINT artstyle_artwork FOREIGN KEY ( art_style_id )
+  3          REFERENCES artwork_style ( art_style_id );
+
+Table ARTWORK altered.
+
+SQL> 
+SQL> ALTER TABLE exhibit
+  2      ADD CONSTRAINT artwork_exhibit FOREIGN KEY ( art_number,
+  3                                                   artist_code )
+  4          REFERENCES artwork ( art_number,
+  5                               artist_code );
+
+Table EXHIBIT altered.
+
+SQL> 
+SQL> ALTER TABLE history
+  2      ADD CONSTRAINT artwork_history FOREIGN KEY ( art_number,
+  3                                                   artist_code )
+  4          REFERENCES artwork ( art_number,
+  5                               artist_code );
+
+Table HISTORY altered.
+
+SQL> 
+SQL> ALTER TABLE sale
+  2      ADD CONSTRAINT customer_sale FOREIGN KEY ( cust_id )
+  3          REFERENCES customer ( cust_id );
+
+Table SALE altered.
+
+SQL> 
+SQL> ALTER TABLE sale
+  2      ADD CONSTRAINT exhibit_sale FOREIGN KEY ( exhibit_no )
+  3          REFERENCES exhibit ( exhibit_no );
+
+Table SALE altered.
+
+SQL> 
+SQL> ALTER TABLE exhibit
+  2      ADD CONSTRAINT gallery_exhibit FOREIGN KEY ( gal_id )
+  3          REFERENCES gallery ( gal_id );
+
+Table EXHIBIT altered.
+
+SQL> 
+SQL> ALTER TABLE history
+  2      ADD CONSTRAINT gallery_history FOREIGN KEY ( gal_id )
+  3          REFERENCES gallery ( gal_id );
+
+Table HISTORY altered.
+
+SQL> 
+SQL> SPOOL OFF

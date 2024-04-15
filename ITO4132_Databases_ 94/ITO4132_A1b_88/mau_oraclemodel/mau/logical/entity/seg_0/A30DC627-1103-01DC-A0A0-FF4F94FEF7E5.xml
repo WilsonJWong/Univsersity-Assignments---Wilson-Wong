@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A30DC627-1103-01DC-A0A0-FF4F94FEF7E5" name="SALE">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 08:17:54 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="sale_id" id="0E3E559A-9DD7-4E9B-4C04-2A020D8556F9">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 08:17:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Sale ID]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sale_date" id="F27D0059-1E60-A156-63E2-AC6B9821E18B">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 08:18:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Sale date]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sale_price" id="1094F0A9-97EF-D8DD-DBD6-CEFAEE4D28FD">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 08:18:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Sale price]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cust_id" id="4460106A-12C5-D26B-0D6C-059B481B9CDE">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 08:21:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[Customer ID]]></commentInRDBMS>
+<generatorID>65EFDD6D-A438-C200-3671-969706884B60</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<referedAttribute>5BE7AF71-A4B3-BD36-E47F-9146DC636A83</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="exhibit_no" id="637DDBE6-81C5-F41F-60A7-C141CB9C66B1">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-14 07:45:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[Exhibit number]]></commentInRDBMS>
+<generatorID>82864EA7-294F-59BC-1219-C8C2613BDF19</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<referedAttribute>1882EA5A-4FAA-AA4B-906A-E3B9AB4CF18E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D00B7E1E-E286-6ADD-662C-2B3088B3EB75" name="SALE PK">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 08:18:08 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0E3E559A-9DD7-4E9B-4C04-2A020D8556F9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,63 @@
+//*****PLEASE ENTER YOUR DETAILS BELOW*****
+//T6b-cr-nosql.txt
+
+// ITO Assignment 2 Task 6b
+
+//Student ID: 29704154
+//Student Name: Wilson Wong
+
+// Comments for your marker:
+//
+//
+//
+//
+//
+
+
+//(b)
+use ("wwon0020");
+db.events.insertMany(
+    [
+        {"_id":"19092021_10K","carnival_date":"19-Sep-2021","carnival_location":"The Tan, Birdwood Ave, Melbourne, 3004","event":{"type":"10K","description":"10 Km Run"},"no_competitors":3,"competitors":[{"comp_no":1,"name":"Cathy Freeman","gender":"F","phone":"0422666777"},{"comp_no":3,"name":"Brigid Radcliffe","gender":"F","phone":"1234567890"},{"comp_no":2,"name":"Rob De Costella","gender":"M","phone":"0422888999"}]},
+        {"_id":"19092021_5K","carnival_date":"19-Sep-2021","carnival_location":"The Tan, Birdwood Ave, Melbourne, 3004","event":{"type":"5K","description":"5 Km Run"},"no_competitors":1,"competitors":[{"comp_no":4,"name":"Bob Ryan","gender":"M","phone":"0411222345"}]},
+        {"_id":"04092022_5K","carnival_date":"04-Sep-2022","carnival_location":"The Tan, Birdwood Ave, Melbourne, 3004","event":{"type":"5K","description":"5 Km Run"},"no_competitors":2,"competitors":[{"comp_no":2,"name":"Rob De Costella","gender":"M","phone":"0422888999"},{"comp_no":5,"name":"Sam Ryan","gender":"U","phone":"0411222345"}]},
+        {"_id":"01022023_10K","carnival_date":"01-Feb-2023","carnival_location":"Bare Creek, Garigal National Park, Sydney, 2075","event":{"type":"10K","description":"10 Km Run"},"no_competitors":1,"competitors":[{"comp_no":1,"name":"Cathy Freeman","gender":"F","phone":"0422666777"}]},
+        {"_id":"01022023_21K","carnival_date":"01-Feb-2023","carnival_location":"Bare Creek, Garigal National Park, Sydney, 2075","event":{"type":"21K","description":"21.1 Km Half Marathon"},"no_competitors":1,"competitors":[{"comp_no":2,"name":"Rob De Costella","gender":"M","phone":"0422888999"}]},
+        {"_id":"01022023_3K","carnival_date":"01-Feb-2023","carnival_location":"Bare Creek, Garigal National Park, Sydney, 2075","event":{"type":"3K","description":"3 Km Community Run/Walk"},"no_competitors":1,"competitors":[{"comp_no":7,"name":"Dan Chu","gender":"M","phone":"0403999808"}]},
+        {"_id":"01022023_5K","carnival_date":"01-Feb-2023","carnival_location":"Bare Creek, Garigal National Park, Sydney, 2075","event":{"type":"5K","description":"5 Km Run"},"no_competitors":1,"competitors":[{"comp_no":6,"name":"Jane Ryan","gender":"F","phone":"0411222345"}]},
+        {"_id":"06042023_21K","carnival_date":"06-Apr-2023","carnival_location":"Open Park, Massey Place, Indooroopilly, QLD, 4068","event":{"type":"21K","description":"21.1 Km Half Marathon"},"no_competitors":4,"competitors":[{"comp_no":7,"name":"Dan Chu","gender":"M","phone":"0403999808"},{"comp_no":11,"name":"Nan Shu","gender":"F","phone":"0421909808"},{"comp_no":1,"name":"Cathy Freeman","gender":"F","phone":"0422666777"},{"comp_no":10,"name":"Ling Shu","gender":"U","phone":"0421909808"}]},
+        {"_id":"06042023_42K","carnival_date":"06-Apr-2023","carnival_location":"Open Park, Massey Place, Indooroopilly, QLD, 4068","event":{"type":"42K","description":"42.2 Km Marathon"},"no_competitors":1,"competitors":[{"comp_no":2,"name":"Rob De Costella","gender":"M","phone":"0422888999"}]},
+        {"_id":"06042023_5K","carnival_date":"06-Apr-2023","carnival_location":"Open Park, Massey Place, Indooroopilly, QLD, 4068","event":{"type":"5K","description":"5 Km Run"},"no_competitors":2,"competitors":[{"comp_no":8,"name":"Srini Vash","gender":"M","phone":"0411234567"},{"comp_no":9,"name":"Nithin Pal","gender":"M","phone":"0450789690"}]},
+        {"_id":"08092023_42K","carnival_date":"08-Sep-2023","carnival_location":"William Park, Devon Park, SA, 5008","event":{"type":"42K","description":"42.2 Km Marathon"},"no_competitors":2,"competitors":[{"comp_no":2,"name":"Rob De Costella","gender":"M","phone":"0422888999"},{"comp_no":11,"name":"Nan Shu","gender":"F","phone":"0421909808"}]},
+        {"_id":"08092023_5K","carnival_date":"08-Sep-2023","carnival_location":"William Park, Devon Park, SA, 5008","event":{"type":"5K","description":"5 Km Run"},"no_competitors":2,"competitors":[{"comp_no":12,"name":"Fan Shu","gender":"M","phone":"0421909808"},{"comp_no":13,"name":"William Wang","gender":"M","phone":"0421909808"}]},
+        {"_id":"20022024_10K","carnival_date":"20-Feb-2024","carnival_location":"Yarra Bend Park, Yarra Bend Rd, Fairfield, 3078","event":{"type":"10K","description":"10 Km Run"},"no_competitors":1,"competitors":[{"comp_no":14,"name":"Pamela Sim","gender":"F","phone":"0430450678"}]},
+        {"_id":"20022024_21K","carnival_date":"20-Feb-2024","carnival_location":"Yarra Bend Park, Yarra Bend Rd, Fairfield, 3078","event":{"type":"21K","description":"21.1 Km Half Marathon"},"no_competitors":3,"competitors":[{"comp_no":1,"name":"Cathy Freeman","gender":"F","phone":"0422666777"},{"comp_no":11,"name":"Nan Shu","gender":"F","phone":"0421909808"},{"comp_no":2,"name":"Rob De Costella","gender":"M","phone":"0422888999"}]},
+        {"_id":"20022024_5K","carnival_date":"20-Feb-2024","carnival_location":"Yarra Bend Park, Yarra Bend Rd, Fairfield, 3078","event":{"type":"5K","description":"5 Km Run"},"no_competitors":1,"competitors":[{"comp_no":13,"name":"William Wang","gender":"M","phone":"0421909808"}]}
+    ]
+);
+
+//(c)
+db.events.find();
+
+//(d)
+db.events.find(
+    {"no_competitors": {"$gt":2}, "event.type": "10K"},
+    {"carnival_date": 1, "carnival_location": 1, "no_competitors": 1, "competitors.comp_no": 1, "competitors.name": 1}
+);
+
+//(e)
+db.events.updateMany(
+    {
+        "carnival_date": "01-Feb-2023"
+    },
+    {
+        "$set":
+        {
+            "carnival_location": "Lake Gillawarna, Georges Hill, 2198"
+        }
+    }
+);
+
+db.events.find(
+    {"carnival_date":"01-Feb-2023"}
+);

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="484980A8-62BB-907D-6CCD-EFA6694232CD" containerWithKeyObject="C335716C-EBDD-3AD8-FEA2-878785CDD221" localFKIndex="67F4B2B5-5D98-2F93-AF73-8AA1E53E7A68" name="ARTIST_ARTWORK">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-17 07:50:22 UTC</createdTime>
+<generatorID>2018F732-B42E-82E9-F909-E6A49F0671A5</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<referredTableLongName>ARTIST</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>07C8BF44-C58D-EAED-1F98-7E22188BB01A</referredTableID>
+<keyObject>545F3042-0A39-530B-8EAF-BDC54B5B0855</keyObject>
+<referredKeyID>545F3042-0A39-530B-8EAF-BDC54B5B0855</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>artist_code</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

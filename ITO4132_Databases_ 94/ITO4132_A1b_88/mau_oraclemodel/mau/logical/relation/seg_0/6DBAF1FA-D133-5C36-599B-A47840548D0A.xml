@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ARTMEDIA_ARTWORK" directorySegmentName="seg_0" id="6DBAF1FA-D133-5C36-599B-A47840548D0A">
+<createdBy>liana</createdBy>
+<createdTime>2023-11-13 07:53:14 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="141B7A81-6B2B-B033-7F73-8D9A43319D11" value="true"/>
+</engineerTo>
+<sourcePk>AFC0392F-8F9B-057E-397C-6C1DC2776006</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>categorises</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>99070C8A-55AB-3783-1F46-5361D479FE12</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>0309A78D-FB00-4C05-926A-22657628EBE3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
