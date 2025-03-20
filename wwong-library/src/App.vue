@@ -1,22 +1,21 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import JSONLab from './components/JSON.vue'
-import Form from './components/Form.vue'
+import BHeader from './components/BHeader.vue'
+import NavBar from './components/NavBar.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div class="main-controller">
+    <header>
+      <BHeader />
+    </header>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+    <!-- Navigation Bar -->
+    <NavBar />
 
-  <main>
-    <Form />
-  </main>
+    <main class="main-box d-flex justify-content-center text-center mt-5">
+      <router-view></router-view>
+    </main>
+  </div>
 </template>
 
 <style scoped>
