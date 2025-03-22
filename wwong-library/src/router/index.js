@@ -19,7 +19,7 @@ const routes = [
       if (isAuthenticated) {
         next()
       } else {
-        next({ name: 'AccessDenied' }) // Redirect to Access Denied page
+        next({ name: 'Login' }) // Redirect to Login page instead
       }
     },
   },

@@ -1,5 +1,5 @@
 <template>
-  <div class="denied">
+  <div class="accessDenied">
     <h1>Access Denied</h1>
     <p>Either username or password is incorrect.</p>
   </div>
